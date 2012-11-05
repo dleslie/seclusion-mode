@@ -51,14 +51,14 @@
       "Window mode to hide all the clutter and help you focus."
       (interactive "CEnter command to run:")
       ;; New window
-      (let ((options '()))
+      (let ((options '((fullscreen . t))))
         (if seclusion-hide-menu
             (setq options (cons '(menu-bar-lines . 0) options)))
         (if seclusion-hide-minibuffer
             (setq options (cons '(minibuffer . nil) options)))
         (if seclusion-hide-toolbar
-            (setq options (cons '(toolbar . nil) options)))
-        (select-frame (new-frame options)))
+            (setq options (cons '(tool-bar-lines . 0) options)))
+        (select-frame (make-frame options)))
       ;; Execute the user command, but don't trip and fall on it
       (condition-case err
           (call-interactively command)
