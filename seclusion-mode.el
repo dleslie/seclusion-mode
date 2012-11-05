@@ -6,7 +6,7 @@
       ;; Execute the user command, but don't trip and fall on it
       (condition-case err
           (call-interactively command)
-          (error (princ (format "Error occurred in executing Theatre command: %s" err))))
+          (error (princ (format "Error occurred in executing client command: %s" err))))
       ;; Go full screen (Emacs 24+)
       (set-frame-parameter nil 'fullscreen
        (when (not (frame-parameter nil 'fullscreen)) 'fullboth))
