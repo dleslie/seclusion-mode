@@ -1,17 +1,23 @@
-;;; seclusion-mode.el --- Not actually a major/minor mode, but a frame configuration for total seclusion. A new frame is opened on the current buffer with as little clutter as possible and in fullscreen.
+;;; seclusion-mode.el --- Edit in seclusion. A Dark Room mode.
 
 ;; Copyright 2012 Daniel Leslie
 ;; Author: Daniel Leslie
 ;; URL: http://github.com/dleslie/seclusion-mode
-;; Version: 1.1.0
+;; Version: 1.1.1
 
 ;; Licensed under the GPL3
 ;; A copy of the license can be found at the above URL
 
+
+;;; Commentary:
+;; Not actually a major/minor mode, but a frame configuration for total seclusion. A new frame is opened on the current buffer with as little clutter as possible and in fullscreen.
+
+;;; Code:
+
 (defgroup seclusion-mode
   nil "Seclusion Mode")
 
-(defcustom 
+(defcustom
   seclusion-hide-minibuffer t
   "Should the minibuffer be hidden?"
   :type 'boolean
@@ -75,10 +81,10 @@
       (if seclusion-hide-fringe-clutter
           (setq fringe-indicator-alist '((truncation . nil)
                                          (continuation . nil)
-                                         (up . nil) 
-                                         (down . nil) 
-                                         (top . nil) 
-                                         (bottom . nil) 
+                                         (up . nil)
+                                         (down . nil)
+                                         (top . nil)
+                                         (bottom . nil)
                                          (top-bottom .nil)
                                          (empty-line . nil)
                                          (overlay-arrow . nil)))))
