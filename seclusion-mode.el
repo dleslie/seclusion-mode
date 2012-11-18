@@ -1,13 +1,12 @@
 ;;; seclusion-mode.el --- Edit in seclusion. A Dark Room mode.
 
 ;; Copyright 2012 Daniel Leslie
-;; Author: Daniel Leslie
+;; Author: Daniel Leslie dan@ironoxide.ca
 ;; URL: http://github.com/dleslie/seclusion-mode
 ;; Version: 1.1.1
 
 ;; Licensed under the GPL3
 ;; A copy of the license can be found at the above URL
-
 
 ;;; Commentary:
 ;; Not actually a major/minor mode, but a frame configuration for total seclusion. A new frame is opened on the current buffer with as little clutter as possible and in fullscreen.
